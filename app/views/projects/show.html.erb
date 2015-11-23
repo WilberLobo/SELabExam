@@ -1,0 +1,39 @@
+<CENTER><table>
+<th>Project Details</th>
+<tr>
+<td>
+
+  <strong>Name:</strong></td>
+<td>  <%= @project.name %></td>
+
+</tr>
+<tr>
+<td>
+  <strong>Description:</strong></td>
+ <td> <%= @project.description %></td>
+</tr>
+<tr><td></td><td>
+<%= link_to 'Edit', edit_project_path(@project) %> 
+|
+<%= link_to 'Back', projects_path %>
+</td></tr>
+<tr><td>
+<hr><hr></td>
+
+<td>
+<hr><hr></td>
+</td>
+</tr>
+</table>
+</center>
+<table>
+<tr><td>	
+<%= link_to(" View user Stories",:controller =>'user_stories' ,:action => 'index' ) %> 
+</td><td>
+<%= link_to(" View sprints",:controller =>'sprints' ,:action => 'index' ) %> 
+</td><td>
+<%= link_to(" View members of project",:controller =>'projectmembers' ,:action => 'index' ) %> 
+</td></tr>
+
+</TABLE>
+

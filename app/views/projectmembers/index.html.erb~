@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<form action="/addMember/assignmember">
+  <strong>Add new Member: </strong>
+
+ <select name="projectmember[email]" >
+    <optgroup label="--select--">
+    <% @memebers.each do |member| %>
+      <option value="<%= member.email %>"><%= member.email %></option>
+    <% end %>
+    </optgroup>
+  </select>
+<input type="hidden" value="<%= session[:current_project] %>" name="projectmember[project_id]" />
+<input type="hidden" value="1" name="id" />
+
+  <input type="submit" value="Add members"/>
+</form>
+
+
+
+<hr><hr>
+<h1>Listing Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Email:</th>
+     
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projectmembers.each do |projectmember| %>
+      <tr>
+        <td><%= projectmember.email %></td>
+        <td><%= link_to 'Destroy', projectmember, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<hr><hr>
+

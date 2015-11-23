@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div style="margin-left:150px">
+<table>
+<th>User Story</th>
+<tr>
+<td>
+  <strong>Id:</strong></td>
+<td>
+  <%= @user_story.id %>
+</td>
+</tr>
+
+<tr><td>
+  <strong>Name:</strong></td><td>
+  <%= @user_story.name %></td>
+</tr>
+
+<tr><td>
+  <strong>Description:</strong></td>
+ <td> <%= @user_story.description %></td>
+</tr>
+
+
+
+
+<tr><td>
+
+<%= link_to(" View tasks",:controller =>'tasks' ,:action => 'index' ) %></td></tr><tr><td>
+
+
+<%= link_to 'Edit', edit_user_story_path(@user_story) %> </td></tr><tr><td>
+<%= link_to 'Back', user_stories_path %></td></tr>
+
+</table>
+</div>

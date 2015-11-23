@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div style="width:150px">
+<table>
+<th>Task : </th>
+<tr><td>
+
+  <strong>Name:</strong></td><td>
+  <%= @task.name %></td>
+</tr>
+
+<tr><td>
+  <strong>Status:</strong></td><td>
+  <%= @task.status %></td>
+</tr>
+
+
+<tr><td>
+  <strong>Member:</strong></td>
+  <td><%= @task.projectmember_id %></td>
+</tr>
+
+<tr><td>
+  <strong>Man hours:</strong></td><td>
+  <%= @task.man_hours %></td>
+</tr>
+<tr><td>
+<%= link_to 'Edit', edit_task_path(@task) %> </td><td>
+<%= link_to 'Back', tasks_path %></td>
+</tr>
+</table>
+</div>
